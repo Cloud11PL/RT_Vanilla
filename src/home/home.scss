@@ -1,0 +1,28 @@
+@import "Pagination.scss";
+
+.characters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  
+  &-count {
+    margin: 1rem;
+  }
+}
+
+.character {
+  background-color: white;
+  margin: 1vh;
+  padding: 1vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  &__name {
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 1rem 0rem !important;
+  }
+  p {
+    margin: 0.2rem;
+  }
+}
