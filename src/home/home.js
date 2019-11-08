@@ -7,11 +7,6 @@ import { showLoadingAnimation, closeAnimation } from './scripts/animation';
 let currentPage = 1;
 let maxPages;
 
-const fetchCharacters = async () => {
-  const response = await getPageCharacters(currentPage);
-  return response;
-}
-
 const getCharacterComponent = (character) => {
   const newDiv = document.createElement('div');
   newDiv.className = "character";
@@ -58,7 +53,7 @@ const sOrNoS = (len) => len > 1 ? "s" : "";
 
 const renderCharacters = async () => {
   showLoadingAnimation();
-  const response = await fetchCharacters();
+  const response = await getPageCharacters(currentPage);
   if (response) {
     closeAnimation();
   }
